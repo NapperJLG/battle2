@@ -1,13 +1,7 @@
 feature 'adding players names' do
-  scenario 'Can enter player 1s name and see on screen' do
-    visit ('/')
-    expect(page).to have_field("player1")
-  end
+  scenario 'submitting names' do
+    sign_in_and_play
+    expect(page).to have_content("Player 1: Jake")
+    expect(page).to have_content("Player 2: Gary")
 end
-
-feature 'adding players names' do
-  scenario 'Can enter player 2s name and see on screen' do
-    visit ('/')
-    expect(page).to have_field("player2")
-  end
 end
